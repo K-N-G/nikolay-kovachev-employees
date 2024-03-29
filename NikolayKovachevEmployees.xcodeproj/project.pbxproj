@@ -16,6 +16,17 @@
 		B35971882BB6E3E100B6E7E2 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35971872BB6E3E100B6E7E2 /* Projects.storyboard */; };
 		B359718A2BB6E5D700B6E7E2 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35971892BB6E5D700B6E7E2 /* Dashboard.storyboard */; };
 		B359718C2BB6E61D00B6E7E2 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359718B2BB6E61D00B6E7E2 /* Storyboard.swift */; };
+		B38371F92BB7328A00C91712 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38371F82BB7328A00C91712 /* View.swift */; };
+		B38372002BB734B400C91712 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38371FF2BB734B400C91712 /* DashboardViewController.swift */; };
+		B38372032BB7351100C91712 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38372022BB7351100C91712 /* ProjectViewController.swift */; };
+		B38372062BB7355800C91712 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38372052BB7355800C91712 /* EmployeeViewController.swift */; };
+		B38372092BB735C100C91712 /* LoadCSVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38372082BB735C100C91712 /* LoadCSVViewController.swift */; };
+		B383720B2BB7374E00C91712 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B383720A2BB7374E00C91712 /* Colors.xcassets */; };
+		B383720D2BB738F000C91712 /* LoadCSVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B383720C2BB738F000C91712 /* LoadCSVTableViewCell.swift */; };
+		B3DA4B742BB75E6600C67FB9 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA4B732BB75E6600C67FB9 /* ProjectTableViewCell.swift */; };
+		B3DA4B762BB75F1B00C67FB9 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA4B752BB75F1B00C67FB9 /* EmployeeTableViewCell.swift */; };
+		B3F2D08C2BB758FC00866757 /* PairOfEmployeesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2D08B2BB758FB00866757 /* PairOfEmployeesTableViewCell.swift */; };
+		B3F2D08E2BB75A5200866757 /* MissingDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2D08D2BB75A5200866757 /* MissingDataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +41,17 @@
 		B35971872BB6E3E100B6E7E2 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
 		B35971892BB6E5D700B6E7E2 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		B359718B2BB6E61D00B6E7E2 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		B38371F82BB7328A00C91712 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		B38371FF2BB734B400C91712 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		B38372022BB7351100C91712 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		B38372052BB7355800C91712 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		B38372082BB735C100C91712 /* LoadCSVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCSVViewController.swift; sourceTree = "<group>"; };
+		B383720A2BB7374E00C91712 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		B383720C2BB738F000C91712 /* LoadCSVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCSVTableViewCell.swift; sourceTree = "<group>"; };
+		B3DA4B732BB75E6600C67FB9 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		B3DA4B752BB75F1B00C67FB9 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		B3F2D08B2BB758FB00866757 /* PairOfEmployeesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairOfEmployeesTableViewCell.swift; sourceTree = "<group>"; };
+		B3F2D08D2BB75A5200866757 /* MissingDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingDataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +92,7 @@
 				B359716C2BB6E0F300B6E7E2 /* AppDelegate.swift */,
 				B359716E2BB6E0F300B6E7E2 /* SceneDelegate.swift */,
 				B35971752BB6E0FC00B6E7E2 /* Assets.xcassets */,
+				B383720A2BB7374E00C91712 /* Colors.xcassets */,
 				B359717A2BB6E0FC00B6E7E2 /* Info.plist */,
 			);
 			path = NikolayKovachevEmployees;
@@ -97,6 +120,8 @@
 		B35971822BB6E24300B6E7E2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B38371FD2BB7333400C91712 /* EmployeeControllers */,
+				B38371FC2BB732FA00C91712 /* ProjectControllers */,
 				B359718D2BB6E97700B6E7E2 /* DashboardControllers */,
 			);
 			path = ViewControllers;
@@ -113,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B359718B2BB6E61D00B6E7E2 /* Storyboard.swift */,
+				B38371F82BB7328A00C91712 /* View.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -120,8 +146,63 @@
 		B359718D2BB6E97700B6E7E2 /* DashboardControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B38372072BB7359300C91712 /* LoadCSVController */,
+				B38371FE2BB7334000C91712 /* DashboardController */,
 			);
 			path = DashboardControllers;
+			sourceTree = "<group>";
+		};
+		B38371FC2BB732FA00C91712 /* ProjectControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B38372012BB734EE00C91712 /* ProjectController */,
+			);
+			path = ProjectControllers;
+			sourceTree = "<group>";
+		};
+		B38371FD2BB7333400C91712 /* EmployeeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B38372042BB7354700C91712 /* EmployeeController */,
+			);
+			path = EmployeeControllers;
+			sourceTree = "<group>";
+		};
+		B38371FE2BB7334000C91712 /* DashboardController */ = {
+			isa = PBXGroup;
+			children = (
+				B38371FF2BB734B400C91712 /* DashboardViewController.swift */,
+				B383720C2BB738F000C91712 /* LoadCSVTableViewCell.swift */,
+				B3F2D08B2BB758FB00866757 /* PairOfEmployeesTableViewCell.swift */,
+				B3F2D08D2BB75A5200866757 /* MissingDataTableViewCell.swift */,
+			);
+			path = DashboardController;
+			sourceTree = "<group>";
+		};
+		B38372012BB734EE00C91712 /* ProjectController */ = {
+			isa = PBXGroup;
+			children = (
+				B38372022BB7351100C91712 /* ProjectViewController.swift */,
+				B3DA4B732BB75E6600C67FB9 /* ProjectTableViewCell.swift */,
+			);
+			path = ProjectController;
+			sourceTree = "<group>";
+		};
+		B38372042BB7354700C91712 /* EmployeeController */ = {
+			isa = PBXGroup;
+			children = (
+				B38372052BB7355800C91712 /* EmployeeViewController.swift */,
+				B3DA4B752BB75F1B00C67FB9 /* EmployeeTableViewCell.swift */,
+			);
+			path = EmployeeController;
+			sourceTree = "<group>";
+		};
+		B38372072BB7359300C91712 /* LoadCSVController */ = {
+			isa = PBXGroup;
+			children = (
+				B38372082BB735C100C91712 /* LoadCSVViewController.swift */,
+			);
+			path = LoadCSVController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +269,7 @@
 				B35971882BB6E3E100B6E7E2 /* Projects.storyboard in Resources */,
 				B35971862BB6E3BB00B6E7E2 /* Employees.storyboard in Resources */,
 				B35971742BB6E0F300B6E7E2 /* Base in Resources */,
+				B383720B2BB7374E00C91712 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,8 +280,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38371F92BB7328A00C91712 /* View.swift in Sources */,
+				B383720D2BB738F000C91712 /* LoadCSVTableViewCell.swift in Sources */,
+				B3F2D08E2BB75A5200866757 /* MissingDataTableViewCell.swift in Sources */,
+				B3F2D08C2BB758FC00866757 /* PairOfEmployeesTableViewCell.swift in Sources */,
+				B38372092BB735C100C91712 /* LoadCSVViewController.swift in Sources */,
 				B359716D2BB6E0F300B6E7E2 /* AppDelegate.swift in Sources */,
+				B38372032BB7351100C91712 /* ProjectViewController.swift in Sources */,
+				B3DA4B742BB75E6600C67FB9 /* ProjectTableViewCell.swift in Sources */,
+				B38372002BB734B400C91712 /* DashboardViewController.swift in Sources */,
 				B359718C2BB6E61D00B6E7E2 /* Storyboard.swift in Sources */,
+				B38372062BB7355800C91712 /* EmployeeViewController.swift in Sources */,
+				B3DA4B762BB75F1B00C67FB9 /* EmployeeTableViewCell.swift in Sources */,
 				B359716F2BB6E0F300B6E7E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
