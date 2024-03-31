@@ -9,11 +9,13 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var fileNameLabel: UILabel!
     
     var rows:[DashboardRow] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserData.loadedFileName = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,15 +24,17 @@ class DashboardViewController: UIViewController {
     }
     
     func setupScreen() {
+        self.fileNameLabel.text = UserData.loadedFileName != "" ? "Loaded file: \(UserData.loadedFileName)" : ""
         self.rows = []
-        if DataManager.employeePairs.isEmpty {
+        if UserData.loadedFileName != "" && DataManager.employeePairs.isEmpty {
+            self.rows.append(DashboardRow(type: .missingData, employeePair: nil))
+        } else if DataManager.employeePairs.isEmpty {
             self.rows.append(DashboardRow(type: .loadCSV, employeePair: nil))
         } else {
             for pair in DataManager.employeePairs {
                 self.rows.append(DashboardRow(type: .pairOfEmployees, employeePair: pair))
             }
         }
-//        self.rows.append(DashboardRow(type: .missingData))
         
         self.tableView.reloadData()
     }

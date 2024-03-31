@@ -24,14 +24,15 @@ class EmployeeViewController: UIViewController {
     func setupScreen() {
         self.rows = []
         
-        if DataManager.employees.isEmpty {
+        if UserData.loadedFileName != "" && DataManager.employeePairs.isEmpty {
+            self.rows.append(EmployeeRow(type: .missingData, employee: nil))
+        } else if DataManager.employees.isEmpty {
             self.rows.append(EmployeeRow(type: .loadCSV, employee: nil))
         } else {
             for employee in DataManager.employees {
                 self.rows.append(EmployeeRow(type: .employee, employee: employee))
             }
         }
-//        self.rows.append(EmployeeRow(type: .missingData))
         
         self.tableView.reloadData()
     }

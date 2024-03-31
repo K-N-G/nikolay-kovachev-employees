@@ -15,6 +15,7 @@
 		B34B9A632BB987EA00492035 /* EmployeePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A622BB987EA00492035 /* EmployeePair.swift */; };
 		B34B9A662BB9BB6E00492035 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B34B9A652BB9BB6E00492035 /* JGProgressHUD */; };
 		B34B9A682BB9BBE600492035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A672BB9BBE600492035 /* ViewController.swift */; };
+		B34B9A6A2BB9BF7A00492035 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A692BB9BF7A00492035 /* UserData.swift */; };
 		B359716D2BB6E0F300B6E7E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359716C2BB6E0F300B6E7E2 /* AppDelegate.swift */; };
 		B359716F2BB6E0F300B6E7E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359716E2BB6E0F300B6E7E2 /* SceneDelegate.swift */; };
 		B35971742BB6E0F300B6E7E2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B35971732BB6E0F300B6E7E2 /* Base */; };
@@ -46,6 +47,7 @@
 		B34B9A602BB8D90900492035 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		B34B9A622BB987EA00492035 /* EmployeePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePair.swift; sourceTree = "<group>"; };
 		B34B9A672BB9BBE600492035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B34B9A692BB9BF7A00492035 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		B35971692BB6E0F300B6E7E2 /* NikolayKovachevEmployees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikolayKovachevEmployees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B359716C2BB6E0F300B6E7E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B359716E2BB6E0F300B6E7E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				B34B9A5E2BB8068A00492035 /* Employee.swift */,
 				B34B9A602BB8D90900492035 /* DateFormat.swift */,
 				B34B9A622BB987EA00492035 /* EmployeePair.swift */,
+				B34B9A692BB9BF7A00492035 /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				B34B9A632BB987EA00492035 /* EmployeePair.swift in Sources */,
 				B38372092BB735C100C91712 /* LoadCSVViewController.swift in Sources */,
 				B359716D2BB6E0F300B6E7E2 /* AppDelegate.swift in Sources */,
+				B34B9A6A2BB9BF7A00492035 /* UserData.swift in Sources */,
 				B34B9A612BB8D90900492035 /* DateFormat.swift in Sources */,
 				B34B9A682BB9BBE600492035 /* ViewController.swift in Sources */,
 				B38372032BB7351100C91712 /* ProjectViewController.swift in Sources */,

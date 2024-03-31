@@ -15,6 +15,7 @@ class LoadCSVViewController: UIViewController {
     }
     
     @IBAction func chooseCSVTapped(_ sender: UIButton) {
+        UserData.loadedFileName = ""
         let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.commaSeparatedText])
         documentPicker.delegate = self
         present(documentPicker, animated: true, completion: nil)
@@ -56,6 +57,7 @@ extension LoadCSVViewController: UIDocumentPickerDelegate {
             }
             DataManager.employeeProjects = employeeProjects
             DataManager.fetchData()
+            UserData.loadedFileName = url.lastPathComponent
             self.showMessage(message: "Success fetch data", delay: 3.0, onDismiss: {
                 self.navigationController?.popViewController(animated: true)
             })

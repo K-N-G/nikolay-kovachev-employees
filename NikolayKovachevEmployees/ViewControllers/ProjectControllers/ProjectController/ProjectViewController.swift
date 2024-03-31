@@ -23,14 +23,15 @@ class ProjectViewController: UIViewController {
     
     func setupScreen() {
         self.rows = []
-        if DataManager.projects.isEmpty {
+        if UserData.loadedFileName != "" && DataManager.employeePairs.isEmpty {
+            self.rows.append(ProjectRow(type: .missingData, project: nil))
+        } else if DataManager.projects.isEmpty {
             self.rows.append(ProjectRow(type: .loadCSV, project: nil))
         } else {
             for project in DataManager.projects {
                 self.rows.append(ProjectRow(type: .project, project: project))
             }
         }
-//        self.rows.append(ProjectRow(type: .missingData))
         
         self.tableView.reloadData()
     }
