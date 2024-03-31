@@ -172,7 +172,7 @@
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="16"/>
+                                                                            <real key="value" value="8"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </stackView>
@@ -200,6 +200,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="L0D-NS-F7b" secondAttribute="trailing" constant="16" id="mIn-sP-Wo9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="daysWorkedTogetherLabel" destination="Lly-kI-VSM" id="ooG-sy-pJc"/>
+                                            <outlet property="employee1Label" destination="06b-xG-tM6" id="tyZ-ZG-tRT"/>
+                                            <outlet property="employee2Label" destination="0AA-nS-hsv" id="Ixz-L0-XxI"/>
+                                            <outlet property="projectIDLabel" destination="xYJ-GL-F1A" id="T7q-un-SBE"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MissingDataTableViewCell" id="wcR-b3-oV3" customClass="MissingDataTableViewCell" customModule="NikolayKovachevEmployees" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="317.33332824707031" width="393" height="91.333335876464844"/>
@@ -301,6 +307,9 @@
                                         <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chooseCSVTapped:" destination="hnX-fT-xfg" eventType="touchUpInside" id="8of-bk-gH0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a CSV file with the following structure: EmpID, ProjectID, DateFrom, DateTo. Thank you." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlI-6m-BCv">
                                 <rect key="frame" x="16" y="393.66666666666669" width="361" height="64.666666666666686"/>

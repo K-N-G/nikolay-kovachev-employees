@@ -23,10 +23,14 @@ class ProjectViewController: UIViewController {
     
     func setupScreen() {
         self.rows = []
-        
-        self.rows.append(ProjectRow(type: .loadCSV))
-        self.rows.append(ProjectRow(type: .project))
-        self.rows.append(ProjectRow(type: .missingData))
+        if DataManager.projects.isEmpty {
+            self.rows.append(ProjectRow(type: .loadCSV, project: nil))
+        } else {
+            for project in DataManager.projects {
+                self.rows.append(ProjectRow(type: .project, project: project))
+            }
+        }
+//        self.rows.append(ProjectRow(type: .missingData))
         
         self.tableView.reloadData()
     }
@@ -46,7 +50,9 @@ extension ProjectViewController: UITableViewDelegate, UITableViewDataSource {
                 return loadCSVTableViewCell
             }
         case .project:
-            if let projectTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProjectTableViewCell", for: indexPath) as? ProjectTableViewCell {
+            if let projectTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProjectTableViewCell", for: indexPath) as? ProjectTableViewCell,
+               let project = row.project {
+                projectTableViewCell.projectIDLabel.text = project.id
                 return projectTableViewCell
             }
         case .missingData:
@@ -68,5 +74,6 @@ extension ProjectViewController {
         }
 
         let type: RowType
+        let project: Project?
     }
 }

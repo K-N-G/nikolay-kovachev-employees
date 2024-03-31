@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B34B9A592BB8038500492035 /* EmployeeProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A582BB8038500492035 /* EmployeeProject.swift */; };
+		B34B9A5B2BB803CA00492035 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A5A2BB803CA00492035 /* DataManager.swift */; };
+		B34B9A5D2BB805CE00492035 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A5C2BB805CE00492035 /* Project.swift */; };
+		B34B9A5F2BB8068A00492035 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A5E2BB8068A00492035 /* Employee.swift */; };
+		B34B9A612BB8D90900492035 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A602BB8D90900492035 /* DateFormat.swift */; };
+		B34B9A632BB987EA00492035 /* EmployeePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A622BB987EA00492035 /* EmployeePair.swift */; };
 		B359716D2BB6E0F300B6E7E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359716C2BB6E0F300B6E7E2 /* AppDelegate.swift */; };
 		B359716F2BB6E0F300B6E7E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359716E2BB6E0F300B6E7E2 /* SceneDelegate.swift */; };
 		B35971742BB6E0F300B6E7E2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B35971732BB6E0F300B6E7E2 /* Base */; };
@@ -30,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B34B9A572BB776C600492035 /* NikolayKovachevEmployees.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NikolayKovachevEmployees.entitlements; sourceTree = "<group>"; };
+		B34B9A582BB8038500492035 /* EmployeeProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProject.swift; sourceTree = "<group>"; };
+		B34B9A5A2BB803CA00492035 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B34B9A5C2BB805CE00492035 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		B34B9A5E2BB8068A00492035 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		B34B9A602BB8D90900492035 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		B34B9A622BB987EA00492035 /* EmployeePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePair.swift; sourceTree = "<group>"; };
 		B35971692BB6E0F300B6E7E2 /* NikolayKovachevEmployees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikolayKovachevEmployees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B359716C2BB6E0F300B6E7E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B359716E2BB6E0F300B6E7E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +97,7 @@
 		B359716B2BB6E0F300B6E7E2 /* NikolayKovachevEmployees */ = {
 			isa = PBXGroup;
 			children = (
+				B34B9A572BB776C600492035 /* NikolayKovachevEmployees.entitlements */,
 				B35971842BB6E29F00B6E7E2 /* Extentions */,
 				B35971832BB6E28F00B6E7E2 /* Managers */,
 				B35971822BB6E24300B6E7E2 /* ViewControllers */,
@@ -101,6 +115,11 @@
 		B35971802BB6E20700B6E7E2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B34B9A582BB8038500492035 /* EmployeeProject.swift */,
+				B34B9A5C2BB805CE00492035 /* Project.swift */,
+				B34B9A5E2BB8068A00492035 /* Employee.swift */,
+				B34B9A602BB8D90900492035 /* DateFormat.swift */,
+				B34B9A622BB987EA00492035 /* EmployeePair.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +149,7 @@
 		B35971832BB6E28F00B6E7E2 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B34B9A5A2BB803CA00492035 /* DataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -281,18 +301,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				B38371F92BB7328A00C91712 /* View.swift in Sources */,
+				B34B9A5B2BB803CA00492035 /* DataManager.swift in Sources */,
+				B34B9A592BB8038500492035 /* EmployeeProject.swift in Sources */,
 				B383720D2BB738F000C91712 /* LoadCSVTableViewCell.swift in Sources */,
 				B3F2D08E2BB75A5200866757 /* MissingDataTableViewCell.swift in Sources */,
 				B3F2D08C2BB758FC00866757 /* PairOfEmployeesTableViewCell.swift in Sources */,
+				B34B9A632BB987EA00492035 /* EmployeePair.swift in Sources */,
 				B38372092BB735C100C91712 /* LoadCSVViewController.swift in Sources */,
 				B359716D2BB6E0F300B6E7E2 /* AppDelegate.swift in Sources */,
+				B34B9A612BB8D90900492035 /* DateFormat.swift in Sources */,
 				B38372032BB7351100C91712 /* ProjectViewController.swift in Sources */,
 				B3DA4B742BB75E6600C67FB9 /* ProjectTableViewCell.swift in Sources */,
 				B38372002BB734B400C91712 /* DashboardViewController.swift in Sources */,
+				B34B9A5F2BB8068A00492035 /* Employee.swift in Sources */,
 				B359718C2BB6E61D00B6E7E2 /* Storyboard.swift in Sources */,
 				B38372062BB7355800C91712 /* EmployeeViewController.swift in Sources */,
 				B3DA4B762BB75F1B00C67FB9 /* EmployeeTableViewCell.swift in Sources */,
 				B359716F2BB6E0F300B6E7E2 /* SceneDelegate.swift in Sources */,
+				B34B9A5D2BB805CE00492035 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NikolayKovachevEmployees/NikolayKovachevEmployees.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D6K4ZDXQL7;
@@ -471,6 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NikolayKovachevEmployees/NikolayKovachevEmployees.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D6K4ZDXQL7;

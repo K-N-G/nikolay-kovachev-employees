@@ -23,10 +23,14 @@ class DashboardViewController: UIViewController {
     
     func setupScreen() {
         self.rows = []
-        
-        self.rows.append(DashboardRow(type: .loadCSV))
-        self.rows.append(DashboardRow(type: .pairOfEmployees))
-        self.rows.append(DashboardRow(type: .missingData))
+        if DataManager.employeePairs.isEmpty {
+            self.rows.append(DashboardRow(type: .loadCSV, employeePair: nil))
+        } else {
+            for pair in DataManager.employeePairs {
+                self.rows.append(DashboardRow(type: .pairOfEmployees, employeePair: pair))
+            }
+        }
+//        self.rows.append(DashboardRow(type: .missingData))
         
         self.tableView.reloadData()
     }
@@ -52,7 +56,16 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
                 return loadCSVTableViewCell
             }
         case .pairOfEmployees:
-            if let pairOfEmployeesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PairOfEmployeesTableViewCell", for: indexPath) as? PairOfEmployeesTableViewCell {
+            if let pairOfEmployeesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PairOfEmployeesTableViewCell", for: indexPath) as? PairOfEmployeesTableViewCell,
+               let pair = row.employeePair {
+                pairOfEmployeesTableViewCell.employee1Label.text = pair.employee1
+                pairOfEmployeesTableViewCell.employee2Label.text = pair.employee2
+                pairOfEmployeesTableViewCell.projectIDLabel.text = pair.projectID
+                if let daysWorkedTogether = pair.daysWorkedTogether {
+                    pairOfEmployeesTableViewCell.daysWorkedTogetherLabel.text = "\(daysWorkedTogether)"
+                } else {
+                    pairOfEmployeesTableViewCell.daysWorkedTogetherLabel.text =  "-"
+                }
                 return pairOfEmployeesTableViewCell
             }
         case .missingData:
@@ -74,5 +87,6 @@ extension DashboardViewController {
         }
 
         let type: RowType
+        let employeePair: EmployeePair?
     }
 }

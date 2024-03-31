@@ -8,7 +8,11 @@
 import UIKit
 
 class PairOfEmployeesTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var employee1Label: UILabel!
+    @IBOutlet weak var employee2Label: UILabel!
+    @IBOutlet weak var projectIDLabel: UILabel!
+    @IBOutlet weak var daysWorkedTogetherLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -21,5 +21,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSOpenAccess</key>
+	<true/>
+	<key>NSFileProviderDomainUsageForBrowsing</key>
+	<array>
+		<string>Any</string>
+	</array>
 </dict>
 </plist>

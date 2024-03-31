@@ -24,9 +24,14 @@ class EmployeeViewController: UIViewController {
     func setupScreen() {
         self.rows = []
         
-        self.rows.append(EmployeeRow(type: .loadCSV))
-        self.rows.append(EmployeeRow(type: .employee))
-        self.rows.append(EmployeeRow(type: .missingData))
+        if DataManager.employees.isEmpty {
+            self.rows.append(EmployeeRow(type: .loadCSV, employee: nil))
+        } else {
+            for employee in DataManager.employees {
+                self.rows.append(EmployeeRow(type: .employee, employee: employee))
+            }
+        }
+//        self.rows.append(EmployeeRow(type: .missingData))
         
         self.tableView.reloadData()
     }
@@ -46,7 +51,9 @@ extension EmployeeViewController: UITableViewDelegate, UITableViewDataSource {
                 return loadCSVTableViewCell
             }
         case .employee:
-            if let employeeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EmployeeTableViewCell", for: indexPath) as? EmployeeTableViewCell {
+            if let employeeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EmployeeTableViewCell", for: indexPath) as? EmployeeTableViewCell,
+               let employee = row.employee {
+                employeeTableViewCell.employeeIDLabel.text = employee.id
                 return employeeTableViewCell
             }
         case .missingData:
@@ -68,5 +75,6 @@ extension EmployeeViewController {
         }
 
         let type: RowType
+        let employee: Employee?
     }
 }
