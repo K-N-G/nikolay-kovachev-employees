@@ -16,11 +16,11 @@ extension UIStoryboard {
         return UIStoryboard.init(name: "Dashboard", bundle: nil)
     }
 
-    static var history: UIStoryboard {
+    static var employees: UIStoryboard {
         return UIStoryboard.init(name: "Employees", bundle: nil)
     }
 
-    static var statistics: UIStoryboard {
+    static var projects: UIStoryboard {
         return UIStoryboard.init(name: "Projects", bundle: nil)
     }
 }

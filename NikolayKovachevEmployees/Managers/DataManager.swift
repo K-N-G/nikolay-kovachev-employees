@@ -22,11 +22,12 @@ final class DataManager {
     static private func fetchEmployees() {
         for employeeProject in employeeProjects {
             if let projectIndex = self.projects.firstIndex(where: {$0.id == employeeProject.projectID}) {
-                self.projects[projectIndex].employees[employeeProject.employeeID] = 0
+                let currentValue = self.projects[projectIndex].employees[employeeProject.employeeID] ?? 0
+                self.projects[projectIndex].employees[employeeProject.employeeID] = currentValue + calculateDaysWorked(dateFrom: employeeProject.dateFrom, dateTo: employeeProject.dateTo ?? "")
             } else {
                 self.projects.append(Project(
                     id: employeeProject.projectID,
-                    employees: [employeeProject.employeeID:0]))
+                    employees: [employeeProject.employeeID:calculateDaysWorked(dateFrom: employeeProject.dateFrom, dateTo: employeeProject.dateTo ?? "")]))
             }
         }
     }
@@ -34,7 +35,8 @@ final class DataManager {
     static private func fetchProjects() {
         for employeeProject in employeeProjects {
             if let employeeIndex = self.employees.firstIndex(where: {$0.id == employeeProject.employeeID}) {
-                self.employees[employeeIndex].projects[employeeProject.projectID] = calculateDaysWorked(dateFrom: employeeProject.dateFrom, dateTo: employeeProject.dateTo ?? "")
+                let currentValue = self.employees[employeeIndex].projects[employeeProject.projectID] ?? 0
+                self.employees[employeeIndex].projects[employeeProject.projectID] = currentValue +  calculateDaysWorked(dateFrom: employeeProject.dateFrom, dateTo: employeeProject.dateTo ?? "")
             } else {
                 self.employees.append(Employee(
                     id: employeeProject.employeeID,

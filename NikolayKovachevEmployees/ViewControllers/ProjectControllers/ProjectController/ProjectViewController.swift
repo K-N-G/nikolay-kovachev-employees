@@ -64,6 +64,21 @@ extension ProjectViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = self.rows[indexPath.row]
+        switch row.type {
+        case .project:
+            if let project = row.project {
+                if let projectDetailsViewController = UIStoryboard.projects.instantiateViewController(identifier: "ProjectDetailsViewController") as? ProjectDetailsViewController {
+                    projectDetailsViewController.project = project
+                    self.navigationController?.pushViewController(projectDetailsViewController, animated: true)
+                }
+            }
+        default:
+            break
+        }
+    }
 }
 
 extension ProjectViewController {

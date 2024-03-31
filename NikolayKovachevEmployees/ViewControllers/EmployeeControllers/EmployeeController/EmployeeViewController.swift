@@ -65,6 +65,21 @@ extension EmployeeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = self.rows[indexPath.row]
+        switch row.type {
+        case .employee:
+            if let employee = row.employee {
+                if let employeeDetailsViewController = UIStoryboard.employees.instantiateViewController(identifier: "EmployeeDetailsViewController") as? EmployeeDetailsViewController {
+                    employeeDetailsViewController.employee = employee
+                    self.navigationController?.pushViewController(employeeDetailsViewController, animated: true)
+                }
+            }
+        default:
+            break
+        }
+    }
 }
 
 extension EmployeeViewController {
