@@ -13,6 +13,8 @@
 		B34B9A5F2BB8068A00492035 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A5E2BB8068A00492035 /* Employee.swift */; };
 		B34B9A612BB8D90900492035 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A602BB8D90900492035 /* DateFormat.swift */; };
 		B34B9A632BB987EA00492035 /* EmployeePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A622BB987EA00492035 /* EmployeePair.swift */; };
+		B34B9A662BB9BB6E00492035 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B34B9A652BB9BB6E00492035 /* JGProgressHUD */; };
+		B34B9A682BB9BBE600492035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B9A672BB9BBE600492035 /* ViewController.swift */; };
 		B359716D2BB6E0F300B6E7E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359716C2BB6E0F300B6E7E2 /* AppDelegate.swift */; };
 		B359716F2BB6E0F300B6E7E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359716E2BB6E0F300B6E7E2 /* SceneDelegate.swift */; };
 		B35971742BB6E0F300B6E7E2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B35971732BB6E0F300B6E7E2 /* Base */; };
@@ -43,6 +45,7 @@
 		B34B9A5E2BB8068A00492035 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		B34B9A602BB8D90900492035 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		B34B9A622BB987EA00492035 /* EmployeePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePair.swift; sourceTree = "<group>"; };
+		B34B9A672BB9BBE600492035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B35971692BB6E0F300B6E7E2 /* NikolayKovachevEmployees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikolayKovachevEmployees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B359716C2BB6E0F300B6E7E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B359716E2BB6E0F300B6E7E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B34B9A662BB9BB6E00492035 /* JGProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +163,7 @@
 			children = (
 				B359718B2BB6E61D00B6E7E2 /* Storyboard.swift */,
 				B38371F82BB7328A00C91712 /* View.swift */,
+				B34B9A672BB9BBE600492035 /* ViewController.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -241,6 +246,9 @@
 			dependencies = (
 			);
 			name = NikolayKovachevEmployees;
+			packageProductDependencies = (
+				B34B9A652BB9BB6E00492035 /* JGProgressHUD */,
+			);
 			productName = NikolayKovachevEmployees;
 			productReference = B35971692BB6E0F300B6E7E2 /* NikolayKovachevEmployees.app */;
 			productType = "com.apple.product-type.application";
@@ -269,6 +277,9 @@
 				Base,
 			);
 			mainGroup = B35971602BB6E0F300B6E7E2;
+			packageReferences = (
+				B34B9A642BB9BB6E00492035 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+			);
 			productRefGroup = B359716A2BB6E0F300B6E7E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,6 +321,7 @@
 				B38372092BB735C100C91712 /* LoadCSVViewController.swift in Sources */,
 				B359716D2BB6E0F300B6E7E2 /* AppDelegate.swift in Sources */,
 				B34B9A612BB8D90900492035 /* DateFormat.swift in Sources */,
+				B34B9A682BB9BBE600492035 /* ViewController.swift in Sources */,
 				B38372032BB7351100C91712 /* ProjectViewController.swift in Sources */,
 				B3DA4B742BB75E6600C67FB9 /* ProjectTableViewCell.swift in Sources */,
 				B38372002BB734B400C91712 /* DashboardViewController.swift in Sources */,
@@ -545,6 +557,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B34B9A642BB9BB6E00492035 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B34B9A652BB9BB6E00492035 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B34B9A642BB9BB6E00492035 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B35971612BB6E0F300B6E7E2 /* Project object */;
 }

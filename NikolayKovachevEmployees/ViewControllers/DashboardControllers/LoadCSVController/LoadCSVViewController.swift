@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class LoadCSVViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     @IBAction func chooseCSVTapped(_ sender: UIButton) {
         let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.commaSeparatedText])
         documentPicker.delegate = self
@@ -22,7 +24,6 @@ class LoadCSVViewController: UIViewController {
 extension LoadCSVViewController: UIDocumentPickerDelegate {
     
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-        
         guard let selectedURL = urls.first else { return }
         readCSVFile(url: selectedURL)
     }
@@ -30,6 +31,7 @@ extension LoadCSVViewController: UIDocumentPickerDelegate {
     func readCSVFile(url: URL) {
         var employeeProjects = [EmployeeProject]()
         guard url.startAccessingSecurityScopedResource() else {
+            self.showError(error: "missing permissions read file", delay: 3.0, onDismiss: nil)
             return
         }
         defer { url.stopAccessingSecurityScopedResource() }
@@ -54,10 +56,11 @@ extension LoadCSVViewController: UIDocumentPickerDelegate {
             }
             DataManager.employeeProjects = employeeProjects
             DataManager.fetchData()
-            self.navigationController?.popViewController(animated: true)
+            self.showMessage(message: "Success fetch data", delay: 3.0, onDismiss: {
+                self.navigationController?.popViewController(animated: true)
+            })
         } catch {
-            print("Error reading file:", error)
+            self.showError(error: "Error reading file: \(error.localizedDescription)", delay: 3.0, onDismiss: nil)
         }
-        
     }
 }
